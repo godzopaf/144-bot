@@ -17,3 +17,4 @@
 `-drole` (deletes roles below the bot's)
 
 **no banall/kickall yet**
+*any errors or questions dm me*
