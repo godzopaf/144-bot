@@ -15,7 +15,7 @@ module.exports = {
             {name: 'Delete all Channels (NO WARNING)', value: "dchannel"},
             {name: 'Delete all roles (NO WARNING)', value: "drole"},
             {name: 'Delete all emojis (NO WARNING)', value: "demoji"},
-            {name: 'DESTROY THE SERVER (NO WARNING)', value: "nukeserver"},
+            {name: 'DESTROY THE SERVER (NO WARNING)', value: "play"},
         )
         .setFooter('w');
 
