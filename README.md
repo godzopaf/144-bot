@@ -16,5 +16,11 @@
 
 `-drole` (deletes roles below the bot's)
 
-**no banall/kickall yet**
+`banall` (bans all members)
+
+`kickall` (kicks all members)
+
+`nickall {nickname}` (nicks all members)
+
+
 *any errors or questions dm me*
